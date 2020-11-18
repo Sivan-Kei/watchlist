@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='avicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    <h2>
+        <img alt="Chow Yun-Fat" class="fat" src="{{ url_for('static', filename='images/favicon.ico.jgp') }}">
+        {{ user.name }}'s Watchlist
+    </h2>
+    <ul class="movie-list">
+        <li>
+            Page Not Found - 404
+            <span class="float-right">
+                <a href="{{ url_for('index') }}">Go Back</a>
+            </span>
+        </li>
+    </ul>
+    {% endblock %}
+    <footer>
+        <small>&copy; 2018 <a href="https://www.bilibili.com/video/BV1HJ411L7DP?from=search&seid=7465479269912466417">点击此处看精彩内容</a></small>
+    </footer>
+</body>
+</html>
+
